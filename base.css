@@ -1,0 +1,468 @@
+/* ページ全体にかかるCSS */
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  margin: 0;
+  padding: 0;
+  color: #484848
+}
+ul{
+  list-style: none;
+}
+a{
+  color: #008489;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+.h-btn{/* 「ホストになる」ボタン */
+  display: inline-block;
+  padding: 0.5em 1em;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #E61E4D;
+  color: #FFF;
+  border-radius: 10px;
+}
+
+.check-mark{/* リストのチェックマーク */
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 25px;
+}
+.check-mark:before {/* リストのチェックマーク */
+  content: "";
+  position: absolute;
+  left: 0;
+  transform: rotate(50deg);
+  width: 8px;
+  height: 16px;
+  border-right: 2px solid #008489;
+  border-bottom: 2px solid #008489;
+}
+
+@media screen and (min-width: 960px) {
+  .section{
+    width: 1000px;
+    margin: 100px auto;
+  }
+  .title-border{
+    width: 100px;
+    border: solid 1px;
+    margin: 0 auto 10px auto;
+  }
+  h2{
+    margin-bottom: 30px;
+    font-size: 50px;
+    text-align: center;
+  }
+  h3{
+    font-size: 20px;
+    margin: 20px 0;
+  }
+  p{
+    margin: 20px 0;
+  }
+ .f-box{
+   display: flex;
+   justify-content: space-between;
+ }
+ .flex-two{
+   width: 45%;
+ }
+ .flex-three{
+   width: 30%;
+ }
+ .eye-catch{
+   width: 100%;
+   margin: 30px 0;
+ }
+}
+
+@media screen and (max-width: 959px) {
+  .section{
+    width: 90%;
+    margin: 100px auto 50px auto;
+  }
+  .title-border{
+    width: 60px;
+    border: solid 1px;
+    margin: 0 0 30px 0;
+  }
+  h2{
+    margin-bottom: 50px;
+    font-size: 35px;
+    line-height: 1em;
+  }
+  h3{
+    font-size: 25px;
+    margin: 10px 0;
+  }
+  p{
+    margin: 10px 0;
+  }
+  .eye-catch{
+    width: 100%;
+    margin: 30px 0;
+  }
+  .flex-three, .flex-two{
+    margin-bottom: 30px;
+  }
+}
+
+/* ここからヘッダー部分 */
+.header-left >ul >li >a{
+  color: #484848;
+  font-weight: bold;
+  font-size: 13px;
+}
+@media screen and (min-width: 960px) {
+  .header-inner{
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .header-left{
+    position: relative;
+    margin-left: 50px;
+  }
+  .header-left >ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .header-left >ul >li{
+    margin-left: 30px;
+  }
+  .header-right{
+    display: flex;
+    align-items: center;
+    margin: 0 100px 0 auto;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .header{
+    display: none;
+  }
+  .header-inner{
+    height: 30px;
+    margin: 15px 0;
+  }
+  .header-left >ul{
+    display: flex;
+  }
+  .header-left >ul >li{
+    margin-left: 10px;
+  }
+  .header-right{
+    display: none;
+  }
+}
+/* ここまでヘッダー部分 */
+
+/* ここからトップビュー部分 */
+@media screen and (min-width: 960px) {
+  .top-view{
+    position: relative;
+    height: 600px;
+    background-image: url(img/1dac6718-8c08-4835-95fd-307592ca6422.jpg);
+    background-size: cover;
+  }
+  .search-box{
+    border-radius: 5px;
+    position: absolute;
+    top: 50px;
+    right: 10%;
+    width: 450px;
+    height: 400px;
+    background-color: white;
+  }
+  .search-box-inner{
+    margin: 20px;
+  }
+  .search-title >h1{
+    font-size: 40px;
+    line-height: 1em;
+    padding-bottom: 50px 20px;
+  }
+  .search-contents >p >span{
+    font-weight: bold;
+  }
+  input, select{
+    height: 50px;
+    font-size: 15px;
+    border: solid #DDDDDD;
+    margin-bottom: 10px;
+    padding-right: 20px;
+    border-radius: 5px;
+  }
+  .form-flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  .place{
+    padding-left: 10px;
+    width: 100%;
+  }
+  .plan{
+    width: 60%;
+    padding-left: 5px;
+  }
+  .number{
+    width: 35%;
+    padding-left: 5px;
+  }
+  #top-view-btn{
+    display: block;
+    width: 100%;
+    padding: 0.5em 0;
+    margin: 30px 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .top-view{
+    position: relative;
+    height: 600px;
+    background-image: url(img/1dac6718-8c08-4835-95fd-307592ca6422.jpg);
+    background-size: cover;
+  }
+  .search-box{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+  }
+  .search-box-inner{
+    width: 90%;
+    height: 300px;
+    margin: auto;
+  }
+  .search-title >h1{
+    transform: translateY(-200%);
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    line-height: 1em;
+    padding-bottom: 50px 20px;
+  }
+  .search-contents >p >span{
+    font-weight: bold;
+  }
+  input, select{
+    height: 35px;
+    font-size: 13px;
+    border: solid #DDDDDD;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  #top-view-btn{
+    display: block;
+    width: 100%;
+    padding: 1em 0;
+    margin: 30px 0;
+    text-align: center;
+  }
+}
+/* ここまでトップビュー部分 */
+
+/* ここからコメント部分 */
+.photo-wrapper >img{
+  width: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  .comment1-inner, .comment2-inner{
+    display: flex;
+  }
+  .comment1-inner{
+    flex-direction: row;
+  }
+  .comment2-inner{
+    flex-direction: row-reverse;
+  }
+  .photo-wrapper{
+    flex: 1;
+    width: 100%;
+  }
+  .comment-wrapper{
+    margin-left: 50px;
+    flex: 1;
+  }
+  .comment-wrapper >p >span{
+    font-size: 30px;
+    line-height: 1.2em;
+    font-weight: bold;
+  }
+  .comment-wrapper >p >span::before{
+    content: "“";
+    font-size: 60px;
+    color: #ffbe5d;
+  }
+}
+@media screen and (max-width: 959px) {
+  .comment-wrapper >p >span{
+    font-size: 18px;
+    line-height: 1.2em;
+    font-weight: bold;
+  }
+  .comment-wrapper >p >span::before{
+    content: "“";
+    font-size: 40px;
+    color: #ffbe5d;
+  }
+}
+/* ここまでコメント部分 */
+
+/* ３ステップ部分 */
+.host-flexbox-inner >img{
+  width: 50px;
+}
+
+/* 「世界に広がる…のホスト」部分 */
+@media screen and (min-width: 960px) {
+  .world-host{
+    margin: 100px auto 200px auto ;
+  }
+}
+@media screen and (max-width: 959px) {
+  .world-host{
+    margin: 50px auto 100px auto;
+  }
+}
+
+/* 「よくある質問」部分 */
+.question-flex-inner >ul >li{
+  padding: 20px 0;
+}
+@media screen and (min-width: 960px) {
+  .question-flex-inner >ul >li{
+    border-bottom: solid 0.5px #DDDDDD;
+  }
+}
+
+/* 「airbnbってなに？」部分 */
+.what-wrapper >img{
+  width: 100%;
+}
+@media screen and (min-width: 960px) {
+  .what-wrapper{
+    position: relative;
+  }
+  .what-wrapper >p{
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* 「パートナー企業」部分 */
+.partner-img{
+  margin: auto;
+  text-align: center;
+}
+.partner-img >img{
+  width: 100%;
+}
+
+/* ここから「さあ、あなたもホストになろう」部分 */
+.become-a-host{
+  margin: 100px auto;
+  position: relative;
+  background-image: url(img/b4471e1f-ba27-4826-b4a7-2b4d523f0245.jpg);
+  background-position: bottom center;
+  background-size: cover;
+  height: 400px;
+}
+@media screen and (min-width: 960px) {
+  .become-cp{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 400px;
+  }
+  .become-cp >h2{
+    color: white;
+    font-size: 55px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .become-cp{
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 350px;
+  }
+  .become-cp >h2{
+    color: white;
+    font-size: 40px;
+  }
+}
+
+/* ここまで「さあ、あなたもホストになろう」部分 */
+
+/* ここからフッター部分 */
+.footer-li, .footer-li >a{
+  font-size: 13px;
+  color: #484848;
+}
+.footer-li >span, .footer-li >a >span{
+  font-weight: bold;
+}
+.footer{
+  background-color: #F7F7F7;
+  border-top: solid #DDDDDD;
+}
+.sub-right >a{
+  margin-right: 10px;
+}
+.sub-left >small >p{
+  margin: 0;
+}
+
+@media screen and (min-width: 960px) {
+  .main-footer, .sub-footer{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+  .main-footer{
+    justify-content: space-between;
+  }
+  .main-footer >ul >li{
+    padding: 5px 30px 5px 0;
+  }
+  .sub-footer{
+    border-top: solid #DDDDDD;
+    flex-direction: row-reverse;
+  }
+  .sub-right{
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .main-footer, .sub-footer{
+    width: 90%;
+    margin: auto;
+  }
+  .main-footer >ul{
+    border-bottom: solid #DDDDDD;
+    padding: 20px 0;
+  }
+  .sub-footer{
+    padding: 20px 0;
+  }
+  .main-footer >ul >li{
+    padding: 5px 30px 5px 0;
+  }
+}
